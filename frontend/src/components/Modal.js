@@ -17,10 +17,12 @@ export default class CustomModal extends Component {
    constructor(props) {
      super(props);
      this.state = {
+        //  把父组件的状态作为属性传到子组件中
        activeItem: this.props.activeItem
      };
    }
    handleChange = e => {
+       console.log(e.target);
      let { name, value } = e.target;
      if (e.target.type === "checkbox") {
        value = e.target.checked;
@@ -31,6 +33,7 @@ export default class CustomModal extends Component {
    render() {
      const { toggle, onSave } = this.props;
      return (
+        //  reactstrap
        <Modal isOpen={true} toggle={toggle}>
          <ModalHeader toggle={toggle}> Todo Item </ModalHeader>
          <ModalBody>
