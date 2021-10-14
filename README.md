@@ -2,11 +2,11 @@
 using django and react
 
 # run the backend server
-cd backend 
+cd backend \n
 python manage.py runserver
 
 # install the dependency in frontend
-cd frontend
+cd frontend. \n
 npm install
 
 # to run the frontend
